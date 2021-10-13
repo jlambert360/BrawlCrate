@@ -192,6 +192,11 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
             costumeNumberLabel.UpdateImage(ff.CharNum, portraitNum, confident);
         }
 
+        public void refreshButton_Click(object sender, EventArgs e)
+        {
+            readDir();
+        }
+
         public void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateCostumeSelectionPane();

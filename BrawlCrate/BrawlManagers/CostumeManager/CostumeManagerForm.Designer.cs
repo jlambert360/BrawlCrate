@@ -55,6 +55,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager {
             this.nameportraitPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.refreshButton = new System.Windows.Forms.ToolStripButton();
             this.otherPVsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.brawlSplitter3 = new BrawlSplitter();
             this.brawlSplitter2 = new BrawlSplitter();
@@ -162,7 +163,8 @@ namespace BrawlCrate.BrawlManagers.CostumeManager {
             this.toolStripDropDownButton3,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton1,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.refreshButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(684, 25);
@@ -328,6 +330,15 @@ namespace BrawlCrate.BrawlManagers.CostumeManager {
             this.toolStripButton1.Size = new System.Drawing.Size(44, 22);
             this.toolStripButton1.Text = "About";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.refreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(44, 22);
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // otherPVsFlowLayoutPanel
             // 
@@ -498,6 +509,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager {
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem defaultZoomLevelToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton refreshButton;
         private System.Windows.Forms.ToolStripMenuItem projectMCheckbox;
         private System.Windows.Forms.FlowLayoutPanel otherPVsFlowLayoutPanel;
         private System.Windows.Forms.ToolStripMenuItem updateMewtwoHatForCurrentKirbyToolStripMenuItem;

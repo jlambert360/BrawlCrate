@@ -18,8 +18,8 @@ namespace BrawlCrate.BrawlManagers.CostumeManager.Portrait_Viewers
                 return null;
             }
 
-            string tex_number = (charNum * 10 + costumeNum + 1).ToString("D3");
-            int index = charNum * 10 + costumeNum + 1;
+            string tex_number = (charNum * 50 + costumeNum + 1).ToString("D4");
+            int index = charNum * 50 + costumeNum + 1;
             ResourceNode bres;
             if (!bres_cache.TryGetValue(index, out bres))
             {

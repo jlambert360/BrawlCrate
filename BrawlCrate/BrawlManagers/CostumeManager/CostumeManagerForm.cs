@@ -59,7 +59,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
             portraitViewers = new List<PortraitViewer>
                 {cssPortraitViewer1, resultPortraitViewer1, battlePortraitViewer1, infoStockIconViewer1};
 
-            cssPortraitViewer1.NamePortraitPreview = nameportraitPreviewToolStripMenuItem.Checked;
+            //cssPortraitViewer1.NamePortraitPreview = nameportraitPreviewToolStripMenuItem.Checked;
             modelManager1.ZoomOut = defaultZoomLevelToolStripMenuItem.Checked;
             pmap = new PortraitMap(this);
             readDir();
@@ -76,6 +76,10 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
                 else if (new DirectoryInfo(Path.Combine(CurrentDirectory, "projectm/pf/fighter")).Exists)
                 {
                     CurrentDirectory = Path.Combine(CurrentDirectory, "projectm/pf/");
+                }
+                else if (new DirectoryInfo(Path.Combine(CurrentDirectory, "project+/pf/fighter")).Exists)
+                {
+                    CurrentDirectory = Path.Combine(CurrentDirectory, "project+/pf/");
                 }
                 else if (new DirectoryInfo(Path.Combine(CurrentDirectory, "pf/fighter")).Exists)
                 {
@@ -217,7 +221,8 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
                             f.Name.StartsWith($"fit{charname}final", StringComparison.OrdinalIgnoreCase) ||
                             f.Name.StartsWith($"fit{charname}entry", StringComparison.OrdinalIgnoreCase) ||
                             f.Name.StartsWith($"fit{charname}result", StringComparison.OrdinalIgnoreCase) ||
-                            f.Name.StartsWith($"fit{charname}etc", StringComparison.OrdinalIgnoreCase))
+                            f.Name.StartsWith($"fit{charname}etc", StringComparison.OrdinalIgnoreCase) ||
+                            f.Name.StartsWith($"fit{charname}spy", StringComparison.OrdinalIgnoreCase))
                         {
                             continue;
                         }
@@ -394,7 +399,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
 
         private void nameportraitPreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cssPortraitViewer1.NamePortraitPreview = nameportraitPreviewToolStripMenuItem.Checked;
+            //cssPortraitViewer1.NamePortraitPreview = nameportraitPreviewToolStripMenuItem.Checked;
         }
 
         private void backgroundColorToolStripMenuItem_Click(object sender, EventArgs e)

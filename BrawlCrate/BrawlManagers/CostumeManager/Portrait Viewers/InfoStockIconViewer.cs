@@ -13,7 +13,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager.Portrait_Viewers
         private static PortraitViewerTextureData[] textureData =
         {
             new PortraitViewerTextureData(32, 32,
-                (i, j) => "Misc Data [30]/Textures(NW4R)/InfStc." + (i * 10 + j + 1).ToString("D3"))
+                (i, j) => "Misc Data [30]/Textures(NW4R)/InfStc." + (i * 50 + j + 1).ToString("D4"))
         };
 
         private string _openFilePath;

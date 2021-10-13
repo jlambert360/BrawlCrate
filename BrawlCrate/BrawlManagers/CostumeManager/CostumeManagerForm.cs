@@ -81,6 +81,10 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
                 {
                     CurrentDirectory = Path.Combine(CurrentDirectory, "project+/pf/");
                 }
+                else if (new DirectoryInfo(Path.Combine(CurrentDirectory, "kingbird/pf/fighter")).Exists)
+                {
+                    CurrentDirectory = Path.Combine(CurrentDirectory, "kingbird/pf/");
+                }
                 else if (new DirectoryInfo(Path.Combine(CurrentDirectory, "pf/fighter")).Exists)
                 {
                     CurrentDirectory = Path.Combine(CurrentDirectory, "pf/");

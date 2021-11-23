@@ -328,7 +328,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
                         break;
                     case 24:
                         // Olimar
-                        ret.Add(key, new int[] {0, 4, 1, 5, 2, 3, 6, 7, 20, 21, 30, 31, 32, 33, 34, 35, 40, 41, 42, 43, 44});
+                        ret.Add(key, new int[] {0, 4, 1, 5, 2, 3, 6, 7, 20, 21, 30, 31, 32, 33, 34, 35, 40, 41, 42, 43});
                         break;
                     case 25:
                         // Lucas
@@ -388,7 +388,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
                         break;
                     case 42:
                         // Knuckles
-                        ret.Add(key, new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22, 23});
+                        ret.Add(key, new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22, 23, 30});
                         break;
                     case 43:
                         // Wolf

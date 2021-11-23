@@ -170,6 +170,8 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
             }
 
             int portraitNum = ff.CostumeNum;
+            string charname = listBox1.SelectedItem.ToString();
+            int charMasqID = pmap.GetMasqID(charname);
             bool confident = false;
 
             if (pmap.ContainsMapping(ff.CharNum))
@@ -193,7 +195,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
                 p.UpdateImage(ff.CharNum, portraitNum);
             }
 
-            costumeNumberLabel.UpdateImage(ff.CharNum, portraitNum, confident);
+            costumeNumberLabel.UpdateImage(ff.CharNum, portraitNum, charMasqID, confident);
         }
 
         public void refreshButton_Click(object sender, EventArgs e)

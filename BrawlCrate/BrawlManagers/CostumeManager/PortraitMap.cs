@@ -19,14 +19,24 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
         public class Fighter
         {
             public string Name { get; private set; }
+            public string masqIDString { get; private set; }
 
             public int CharBustTexIndex { get; private set; }
             //public int? FighterIndex, CSSSlot;
+
+            public int masqID { get; private set; }
 
             public Fighter(string Name, int CharBustTexIndex)
             {
                 this.Name = Name;
                 this.CharBustTexIndex = CharBustTexIndex;
+            }
+
+            public Fighter(string Name, int CharBustTexIndex, int masqID)
+            {
+                this.Name = Name;
+                this.CharBustTexIndex = CharBustTexIndex;
+                this.masqID = masqID;
             }
 
             public Fighter(string Name, int CharBustTexIndex, int FighterIndex, int CSSSlot)
@@ -42,49 +52,49 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
         /// </summary>
         public static readonly Fighter[] KnownFighters =
         {
-            new Fighter("mario", 0),
-            new Fighter("donkey", 1),
-            new Fighter("link", 2),
-            new Fighter("samus", 3),
-            new Fighter("yoshi", 4),
-            new Fighter("kirby", 5),
-            new Fighter("fox", 6),
-            new Fighter("pikachu", 7),
-            new Fighter("luigi", 8),
-            new Fighter("captain", 9),
-            new Fighter("ness", 10),
-            new Fighter("koopa", 11),
-            new Fighter("peach", 12),
-            new Fighter("zelda", 13),
-            new Fighter("sheik", 14),
-            new Fighter("popo", 15),
-            new Fighter("marth", 16),
-            new Fighter("gamewatch", 17),
-            new Fighter("falco", 18),
-            new Fighter("ganon", 19),
-            new Fighter("metaknight", 21),
-            new Fighter("pit", 22),
-            new Fighter("szerosuit", 23),
-            new Fighter("pikmin", 24),
-            new Fighter("lucas", 25),
-            new Fighter("diddy", 26),
-            new Fighter("mewtwo", 27), // PM 3.0
-            new Fighter("poketrainer", 27),
-            new Fighter("pokelizardon", 28),
-            new Fighter("pokezenigame", 29),
-            new Fighter("pokefushigisou", 30),
-            new Fighter("dedede", 31),
-            new Fighter("lucario", 32),
-            new Fighter("ike", 33),
-            new Fighter("robot", 34),
-            new Fighter("purin", 36),
-            new Fighter("wario", 37),
-            new Fighter("roy", 39), // PM 3.0
-            new Fighter("toonlink", 40),
-            new Fighter("knuckles", 42), // P+
-            new Fighter("wolf", 43),
-            new Fighter("snake", 45),
-            new Fighter("sonic", 46)
+            new Fighter("mario", 0, 00),
+            new Fighter("donkey", 1, 01),
+            new Fighter("link", 2, 02),
+            new Fighter("samus", 3, 03),
+            new Fighter("yoshi", 4, 05),
+            new Fighter("kirby", 5, 06),
+            new Fighter("fox", 6, 07),
+            new Fighter("pikachu", 7, 08),
+            new Fighter("luigi", 8, 09),
+            new Fighter("captain", 9, 10),
+            new Fighter("ness", 10, 11),
+            new Fighter("koopa", 11, 12),
+            new Fighter("peach", 12, 13),
+            new Fighter("zelda", 13, 14),
+            new Fighter("sheik", 14, 15),
+            new Fighter("popo", 15, 16),
+            new Fighter("marth", 16, 17),
+            new Fighter("gamewatch", 17, 18),
+            new Fighter("falco", 18, 19),
+            new Fighter("ganon", 19, 20),
+            new Fighter("metaknight", 21, 22),
+            new Fighter("pit", 22, 23),
+            new Fighter("szerosuit", 23, 04),
+            new Fighter("pikmin", 24, 24),
+            new Fighter("lucas", 25, 25),
+            new Fighter("diddy", 26, 26),
+            new Fighter("mewtwo", 27, 40), // PM 3.0
+            new Fighter("poketrainer", 27, 27),
+            new Fighter("pokelizardon", 28, 28),
+            new Fighter("pokezenigame", 29, 29),
+            new Fighter("pokefushigisou", 30, 30),
+            new Fighter("dedede", 31, 31),
+            new Fighter("lucario", 32, 32),
+            new Fighter("ike", 33, 33),
+            new Fighter("robot", 34, 34),
+            new Fighter("purin", 36, 35),
+            new Fighter("wario", 37, 21),
+            new Fighter("roy", 39, 41), // PM 3.0
+            new Fighter("toonlink", 40, 36),
+            new Fighter("knuckles", 42, 42), // P+
+            new Fighter("wolf", 43, 37),
+            new Fighter("snake", 45, 38),
+            new Fighter("sonic", 46, 39)
         };
 
         // Fighter, CSSSlot, Cosmetic
@@ -471,6 +481,14 @@ namespace BrawlCrate.BrawlManagers.CostumeManager
                    ?? (from f in KnownFighters
                        where f.Name == name
                        select (int?) f.CharBustTexIndex).FirstOrDefault()
+                   ?? -1;
+        }
+
+        public int GetMasqID(string index)
+        {
+            return (from f in KnownFighters
+                       where f.Name == index
+                    select (int?)f.masqID).FirstOrDefault()
                    ?? -1;
         }
 

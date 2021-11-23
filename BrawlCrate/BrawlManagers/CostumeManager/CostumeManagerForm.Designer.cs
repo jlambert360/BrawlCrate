@@ -297,7 +297,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager {
             this.projectMCheckbox.CheckOnClick = true;
             this.projectMCheckbox.Name = "projectMCheckbox";
             this.projectMCheckbox.Size = new System.Drawing.Size(274, 22);
-            this.projectMCheckbox.Text = "Use Project M 3.6 mappings";
+            this.projectMCheckbox.Text = "Use Bird Build mappings";
             this.projectMCheckbox.Click += new System.EventHandler(this.projectMCheckbox_Click);
             // 
             // separator
@@ -423,7 +423,7 @@ namespace BrawlCrate.BrawlManagers.CostumeManager {
             // 
             this.costumeNumberLabel.Location = new System.Drawing.Point(3, 0);
             this.costumeNumberLabel.Name = "costumeNumberLabel";
-            this.costumeNumberLabel.Size = new System.Drawing.Size(128, 20);
+            this.costumeNumberLabel.Size = new System.Drawing.Size(128, 24);
             this.costumeNumberLabel.TabIndex = 6;
             this.costumeNumberLabel.Text = "No costume selected";
             this.costumeNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
